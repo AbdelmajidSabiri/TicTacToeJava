@@ -90,7 +90,7 @@ public class TicTacToe implements ActionListener{
 		
 		// Add delay before specify who's turn is
 		try {
-			Thread.sleep(2000);
+			Thread.sleep(1000);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -230,12 +230,26 @@ public class TicTacToe implements ActionListener{
 	
 	public void xWins(int a, int b, int c) {
 		
+		buttons[a].setBackground(Color.GREEN);
+		buttons[b].setBackground(Color.GREEN);
+		buttons[c].setBackground(Color.GREEN);
 		
-		
+		for (int i = 0 ; i<9 ; i++) {
+			buttons[i].setEnabled(false);
+		}
+		textfield.setText("X wins");
 	}
 	
 	public void oWins(int a, int b, int c) {
 		
+		buttons[a].setBackground(Color.GREEN);
+		buttons[b].setBackground(Color.GREEN);
+		buttons[c].setBackground(Color.GREEN);
+		
+		for (int i = 0 ; i<9 ; i++) {
+			buttons[i].setEnabled(false);
+		}
+		textfield.setText("O wins");
 	}
 	
 	
